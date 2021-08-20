@@ -150,7 +150,7 @@ class SiteController extends Controller
     public function actionAbout()
     {
         $rows = Car::find()->all();
-        return $this->render('cars');
+        return $this->render('c1ars');
     }
 
 
