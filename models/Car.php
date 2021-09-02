@@ -22,10 +22,11 @@ class Car extends ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'model'], 'required'],
+            [['name', 'model', 'typemachine'], 'required'],
             [['name', 'model', 'description'], 'trim'],
             [['name', 'model'], 'string', 'max' => 255],
             ['description', 'string', 'max' => 500],
+            ['typemachine', 'string', 'max' => 500],
         ];
     }
     public function behaviors()

@@ -20,7 +20,9 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
     <?= $form->field($model, 'name')->textInput() ?>
     <?= $form->field($model, 'model')->textInput() ?>
+    <?= $form->field($model, 'typemachine')->textInput() ?>
     <?= $form->field($model, 'description')->textarea() ?>
+    
     <div class="form-group">
         <div class="col-lg-offset-1 col-lg-11">
             <?= Html::submitButton('Добавить', ['class' => 'btn btn-primary', 'name' => 'add-new-car--button']) ?>

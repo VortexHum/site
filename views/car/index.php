@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'model',
             'description',
             'created_at',
+            'typemachine',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
