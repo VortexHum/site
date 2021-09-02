@@ -53,10 +53,11 @@ if (Yii::$app->user->isGuest) {
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+            /*
             ['label' => 'Домой', 'url' => ['/site/index']],
-            ['label' => 'Добавить машину', 'url' => ['/car/create']],
+            */            
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Авторизация', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
@@ -66,9 +67,10 @@ if (Yii::$app->user->isGuest) {
                 )
                 . Html::endForm()
                 . '</li>'
-            ),
-            ['label' => 'Все машины', 'url' => ['/car/index']],
+            ),            
             ['label' => 'Регистрация', 'url' => ['/site/signup']],
+            ['label' => 'Все машины', 'url' => ['/car/index']],
+            ['label' => 'Добавить машину', 'url' => ['/car/create']],
         ],
     ]);
     NavBar::end();

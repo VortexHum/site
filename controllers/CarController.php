@@ -5,10 +5,31 @@ namespace app\controllers;
 use Yii;
 use app\models\Car;
 use yii\web\Controller;
+use yii\filters\AccessControl;
 use app\models\search\CarSearch;
 
 class CarController extends Controller
 {
+
+    public function behaviors(){
+        return [
+            'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                    [
+                        'actions' => ['error'],
+                        'allow' => true,
+                        'roles' => ["?","@"],
+                   ],
+                ],
+            ],
+        ];
+    }
+
     public function actionCreate()
     {
         $model = new Car();
