@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 02 2021 г., 09:57
+-- Время создания: Сен 02 2021 г., 13:08
 -- Версия сервера: 8.0.19
 -- Версия PHP: 7.1.33
 
@@ -34,14 +34,14 @@ CREATE TABLE `cars` (
   `description` varchar(500) DEFAULT NULL,
   `created_at` int NOT NULL,
   `updated_at` int NOT NULL,
-  `new_column` int DEFAULT NULL
+  `typemachine` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `cars`
 --
 
-INSERT INTO `cars` (`id`, `name`, `model`, `description`, `created_at`, `updated_at`, `new_column`) VALUES
+INSERT INTO `cars` (`id`, `name`, `model`, `description`, `created_at`, `updated_at`, `typemachine`) VALUES
 (1, 'Mitsubishi', 'X', 'Something', 1618571185, 1618571185, NULL),
 (2, '234', '234', '234', 1618826360, 1618826360, NULL),
 (3, 'Mazda', '1', '2', 23, 2234, NULL),
