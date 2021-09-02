@@ -23,9 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'model',
             'description',
-            'created_at',
-            'typemachine',
-            ['class' => 'yii\grid\ActionColumn'],
+            'typemachine',       
         ],
     ]); ?>
     <?php Pjax::end(); ?>
